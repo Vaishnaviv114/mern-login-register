@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import { connectDB } from './config/db.js';
+import cors from "cors";
 
 
 
@@ -9,6 +10,9 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 
 const app = express();
+app.use(cors({
+  origin: "https://mern-login-register-frontend.onrender.com"
+}));
 
 app.use(express.json());
 
