@@ -4,6 +4,7 @@ import authRoutes from './routes/auth.js';
 import { connectDB } from './config/db.js';
 
 
+
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
